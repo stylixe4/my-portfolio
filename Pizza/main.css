@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #404040;
+    color: #333333;
+    padding: 20px;
+}
+
+.grid-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.recipe-banner {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    margin-top: 15px;
+}
+
+.content-img {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.step-img {
+    width: 100%;
+    max-width: 250px;
+    margin: 8px 0;
+}
+
+.step {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+#header {
+    grid-column: 1 / span 2;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 20px;
+}
+
+#main1 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+#main2 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+#right {
+    grid-column: 2 / 3;
+    grid-row: 2 / span 2;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+#footer {
+    grid-column: 1 / span 2;
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    padding: 12px;
+}
+
+#footer a {
+    color: #ffd166;
+    text-decoration: none;
+}
+
+h2, h3 {
+    margin-bottom: 10px;
+}
+
+ul {
+    margin-left: 20px;
+    line-height: 1.6;
+}
+
+@media only screen and (max-width: 760px) {
+    .grid-container {
+        grid-template-columns: 2fr;
+    }
+
+    #header,
+    #main1,
+    #main2,
+    #right,
+    #footer {
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
+
+    body {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+	.grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    body {
+        padding: 5px;
+    }
+
+    .grid-container {
+        gap: 10px;
+    }
+
+    .recipe-banner {
+        max-height: 180px;
+    }
+
+    .step-img {
+        max-width: 100%;
+    }
+
+    ul {
+        margin-left: 15px;
+    }
+}
